@@ -1,0 +1,13 @@
+{
+  "name": "design-system-workshop",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd todoApp && npm run serve",
+    "storybook": "cd designSystem && npm run storybook"
+  },
+  "author": "",
+  "license": "ISC"
+}

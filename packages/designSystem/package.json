@@ -1,0 +1,30 @@
+{
+  "name": "@micahgodbolt/demo-design-system",
+  "version": "1.0.0",
+  "description": "A collection of Vue components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-knobs": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "@storybook/vue": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "babel-preset-vue": "^2.0.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-style-loader": "^3.1.2",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "dependencies": {}
+}

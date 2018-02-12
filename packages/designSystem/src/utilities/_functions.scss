@@ -1,0 +1,10 @@
+/// lighter() - Unified color lightening
+/// @param {color} $color - color to lighten
+/// @param {number} $steps - number of steps to lighten the color
+/// @example scss - lighter()
+///   lighter(#333, 2)
+///   // #666666
+@function lighter($color, $steps) {
+  $amount: $steps * 10;
+  @return lighten($color, $amount);
+}

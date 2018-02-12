@@ -1,0 +1,11 @@
+
+/// Type Mixin - Shorthand for declaring style variations
+/// @param {string} $type - string to pass into [data-variant]
+/// @example scss - type() mixin
+///   @include variant('error') { color: red }
+///   // [data-variant='error'] { color: red }
+@mixin variant($type) {
+  [data-variant='#{$type}'] {
+    @content
+  }
+}

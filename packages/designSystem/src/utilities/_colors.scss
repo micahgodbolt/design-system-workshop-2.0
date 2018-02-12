@@ -1,0 +1,27 @@
+@import 'functions';
+
+/// @todo Make red shades based off of 1 color
+$red: #af2f2f;
+///
+$redLight: #af5b5e;
+///
+$redLighter: lighter($redLight, 1);
+
+///
+$green: #5dc2af;
+///
+$greenLight: #bddad5;
+
+///
+$neutraldark: #4d4d4d;
+///
+$neutral: #777;
+///
+$neutralLight: #bfbfbf;
+///
+$neutralLighter: #e6e6e6;
+
+///
+$bg: #ffffff;
+///
+$fg: #000;
