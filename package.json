@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node node_modules/@microsoft/rush/bin/rush install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd packages/todoApp && npm run serve",
     "storybook": "cd packages/designSystem && npm run storybook",
     "screener": "cd packages/designSystem && npm run screener"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@microsoft/rush": "^4.2.5"
+  }
 }
