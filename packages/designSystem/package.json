@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "screener": "screener-storybook --conf screener.config.js",
     "build": ""
   },
   "author": "",
@@ -24,7 +25,9 @@
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-style-loader": "^3.1.2",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "screener-storybook": "^0.9.15",
+    "screener-runner": "^0.6.19"
   },
   "dependencies": {}
 }

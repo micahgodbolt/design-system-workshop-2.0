@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd todoApp && npm run serve",
-    "storybook": "cd designSystem && npm run storybook"
+    "start": "cd packages/todoApp && npm run serve",
+    "storybook": "cd packages/designSystem && npm run storybook",
+    "screener": "cd packages/designSystem && npm run screener"
   },
   "author": "",
   "license": "ISC"
