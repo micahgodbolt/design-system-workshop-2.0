@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd packages/todoApp && npm run serve",
     "storybook": "cd packages/designSystem && npm run storybook",
+    "storybook:build": "cd packages/designSystem && npm run build-storybook",
     "screener": "cd packages/designSystem && npm run screener"
   },
   "author": "",
