@@ -7,3 +7,4 @@ node_modules
 dist
 storybook-static
 package-lock.json
+*build.log
