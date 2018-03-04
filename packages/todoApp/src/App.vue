@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <Shell id="app">
     <Title text="todos" />
     <section class="todoapp">
       <header class="header">
@@ -50,7 +50,7 @@
       </Nav>
     </section>
     <Info></Info>
-  </div>
+  </Shell>
 </template>
 
 <script>
@@ -65,6 +65,7 @@ import Title from '@micahgodbolt/demo-design-system/src/components/Title/Title'
 import List from '@micahgodbolt/demo-design-system/src/components/List/List'
 const Nav = () => import('@micahgodbolt/demo-design-system/src/components/Nav/Nav')
 import './App.css'
+import Shell from '@micahgodbolt/demo-design-system/src/utilities/Shell.vue';
 
 export default {
   name: 'app',
@@ -77,7 +78,8 @@ export default {
     TodoCount,
     TodoItem,
     Title,
-    Nav
+    Nav,
+    Shell
   },
   data: function () {
     return {
