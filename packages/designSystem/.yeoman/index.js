@@ -33,13 +33,13 @@ module.exports = class extends Generator {
     names.forEach(name => {
         this.fs.copyTpl(
             this.templatePath('_Component.stories.js'),
-            this.destinationPath( 'src/components/' + name + '/' + name + '.stories.jsx'),
+            this.destinationPath( 'src/components/' + name + '/' + name + '.stories.js'),
             { name }
         );
 
         this.fs.copyTpl(
             this.templatePath('_Component.vue'),
-            this.destinationPath( 'src/components/' + name + '/' + name + '.md'),
+            this.destinationPath( 'src/components/' + name + '/' + name + '.vue'),
             { name }
         );
     });

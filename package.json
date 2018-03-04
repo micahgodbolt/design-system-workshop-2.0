@@ -9,7 +9,8 @@
     "start": "cd packages/todoApp && npm run serve",
     "storybook": "cd packages/designSystem && npm run storybook",
     "storybook:build": "cd packages/designSystem && npm run build-storybook",
-    "screener": "cd packages/designSystem && npm run screener"
+    "screener": "cd packages/designSystem && npm run screener",
+    "scaffold": "cd packages/designSystem && npm run scaffold"
   },
   "author": "",
   "license": "ISC",

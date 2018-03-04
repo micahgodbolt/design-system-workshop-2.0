@@ -8,6 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "screener": "screener-storybook --conf screener.config.js --debug",
+    "scaffold": "yo .yeoman/",
     "build": ""
   },
   "author": "",
@@ -27,7 +28,10 @@
     "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.13",
     "screener-storybook": "^0.11.1",
-    "screener-runner": "^0.8.1"
+    "screener-runner": "^0.8.1",
+    "yeoman-generator": "^2.0.2",
+    "yo": "^2.0.1",
+    "yosay": "^2.0.1"
   },
   "dependencies": {}
 }
