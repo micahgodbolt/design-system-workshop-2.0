@@ -446,7 +446,7 @@ h1 {
 }
 
 .todo-count {
-  flex-basis: 150px;
+  color: #777;
 }
 
 .filters {
