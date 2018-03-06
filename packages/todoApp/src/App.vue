@@ -207,6 +207,10 @@ var filters = {
 </script>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
