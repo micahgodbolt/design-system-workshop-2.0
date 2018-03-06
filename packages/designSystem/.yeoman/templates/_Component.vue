@@ -8,6 +8,7 @@
   }
 </script>
 
-<style >
+<style lang="scss" scoped>
+@import '../../utilities/utilities';
 
 </style>
