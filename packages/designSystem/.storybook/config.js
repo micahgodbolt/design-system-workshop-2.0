@@ -10,7 +10,19 @@ if (typeof window === 'object' && window.navigator && (/node\.js/i).test(window.
   }));
 }
 
-import { configure } from '@storybook/vue'
+import { configure, addDecorator } from '@storybook/vue'
+import Vue from 'vue';
+
+import Shell from '../src/utilities/Shell.vue';
+
+addDecorator(story => {
+  const Story = story();
+  return {
+    components: { Story, Shell },
+    template: '<Shell style="padding: 30px; background: white" > <Story/> </Shell>'
+  }
+})
+
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src/components', true, /.stories.js$/);
