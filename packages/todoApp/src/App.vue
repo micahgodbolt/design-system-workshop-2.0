@@ -60,23 +60,21 @@
 </template>
 
 <script>
-
 export default {
-  name: 'app',
-  components: {
-  },
-  data: function () {
+  name: "app",
+  components: {},
+  data: function() {
     return {
       todos: todoStorage.fetch(),
-      newTodo: '',
+      newTodo: "",
       editedTodo: null,
-      visibility: 'active'
-    }
+      visibility: "active"
+    };
   },
   watch: {
     todos: {
-      handler: function (todos) {
-        todoStorage.save(todos)
+      handler: function(todos) {
+        todoStorage.save(todos);
       },
       deep: true
     }
@@ -85,77 +83,77 @@ export default {
   // computed properties
   // http://vuejs.org/guide/computed.html
   computed: {
-    filteredTodos: function () {
-      return filters[this.visibility](this.todos)
+    filteredTodos: function() {
+      return filters[this.visibility](this.todos);
     },
-    remaining: function () {
-      return filters.active(this.todos).length
+    remaining: function() {
+      return filters.active(this.todos).length;
     },
     allDone: {
-      get: function () {
-        return this.remaining === 0
+      get: function() {
+        return this.remaining === 0;
       },
-      set: function (value) {
-        this.todos.forEach(function (todo) {
-          todo.completed = value
-        })
+      set: function(value) {
+        this.todos.forEach(function(todo) {
+          todo.completed = value;
+        });
       }
     }
   },
 
   filters: {
-    pluralize: function (n) {
-      return n === 1 ? 'item' : 'items'
+    pluralize: function(n) {
+      return n === 1 ? "item" : "items";
     }
   },
 
   // methods that implement data logic.
   // note there's no DOM manipulation here at all.
   methods: {
-    addTodo: function () {
-      var value = this.newTodo && this.newTodo.trim()
+    addTodo: function() {
+      var value = this.newTodo && this.newTodo.trim();
       if (!value) {
-        return
+        return;
       }
       this.todos.push({
         id: todoStorage.uid++,
         title: value,
         completed: false
-      })
-      this.newTodo = ''
+      });
+      this.newTodo = "";
     },
 
-    removeTodo: function (todo) {
-      this.todos.splice(this.todos.indexOf(todo), 1)
+    removeTodo: function(todo) {
+      this.todos.splice(this.todos.indexOf(todo), 1);
     },
 
-    editTodo: function (todo) {
-      this.beforeEditCache = todo.title
-      this.editedTodo = todo
+    editTodo: function(todo) {
+      this.beforeEditCache = todo.title;
+      this.editedTodo = todo;
     },
 
-    doneEdit: function (todo) {
+    doneEdit: function(todo) {
       if (!this.editedTodo) {
-        return
+        return;
       }
-      this.editedTodo = null
-      todo.title = todo.title.trim()
+      this.editedTodo = null;
+      todo.title = todo.title.trim();
       if (!todo.title) {
-        this.removeTodo(todo)
+        this.removeTodo(todo);
       }
     },
 
-    cancelEdit: function (todo) {
-      this.editedTodo = null
-      todo.title = this.beforeEditCache
+    cancelEdit: function(todo) {
+      this.editedTodo = null;
+      todo.title = this.beforeEditCache;
     },
 
-    removeCompleted: function () {
-      this.todos = filters.active(this.todos)
+    removeCompleted: function() {
+      this.todos = filters.active(this.todos);
     },
 
-    setFilter: function (filter) {
-      this.visibility = filter
+    setFilter: function(filter) {
+      this.visibility = filter;
     }
   },
 
@@ -163,47 +161,46 @@ export default {
   // before focusing on the input field.
   // http://vuejs.org/guide/custom-directive.html
   directives: {
-    'todo-focus': function (el, binding) {
+    "todo-focus": function(el, binding) {
       if (binding.value) {
-        el.focus()
+        el.focus();
       }
     }
   }
-}
+};
 
 // localStorage persistence
-var STORAGE_KEY = 'todos-vuejs-2.0'
+var STORAGE_KEY = "todos-vuejs-2.0";
 var todoStorage = {
-  fetch: function () {
-    var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
-    todos.forEach(function (todo, index) {
-      todo.id = index
-    })
-    todoStorage.uid = todos.length
-    return todos
+  fetch: function() {
+    var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    todos.forEach(function(todo, index) {
+      todo.id = index;
+    });
+    todoStorage.uid = todos.length;
+    return todos;
   },
-  save: function (todos) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+  save: function(todos) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
   }
-}
+};
 
 // visibility filters
 var filters = {
-  all: function (todos) {
-    return todos
+  all: function(todos) {
+    return todos;
   },
-  active: function (todos) {
-    return todos.filter(function (todo) {
-      return !todo.completed
-    })
+  active: function(todos) {
+    return todos.filter(function(todo) {
+      return !todo.completed;
+    });
   },
-  completed: function (todos) {
-    return todos.filter(function (todo) {
-      return todo.completed
-    })
+  completed: function(todos) {
+    return todos.filter(function(todo) {
+      return todo.completed;
+    });
   }
-}
-
+};
 </script>
 
 <style>
@@ -218,7 +215,7 @@ body {
 }
 
 body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
   background: #f5f5f5;
   color: #4d4d4d;
@@ -240,13 +237,12 @@ body {
   background: white;
   margin: 70px 0 40px 0;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
 .header {
   display: flex;
-  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
 }
 
 .main {
@@ -321,7 +317,7 @@ h1 {
 }
 
 .toggle-all:before {
-  content: '❯';
+  content: "❯";
   font-size: 22px;
   line-height: 28px;
   color: #e6e6e6;
@@ -416,7 +412,7 @@ h1 {
 }
 
 .todo-list li .destroy:after {
-  content: '×';
+  content: "×";
 }
 
 .todo-list li:hover .destroy {
@@ -441,7 +437,7 @@ h1 {
   flex-basis: 150px;
 }
 
-.footer > *:nth-child(n+2) {
+.footer > *:nth-child(n + 2) {
   flex-grow: 1;
 }
 
@@ -504,5 +500,4 @@ h1 {
 .info a:hover {
   text-decoration: underline;
 }
-
 </style>

@@ -3,12 +3,11 @@
 </template>
 
 <script>
-  export default {
-    name: '<%= name %>'
-  }
+export default {
+  name: "<%= name %>"
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../../utilities/utilities';
-
+@import "../../utilities/utilities";
 </style>
