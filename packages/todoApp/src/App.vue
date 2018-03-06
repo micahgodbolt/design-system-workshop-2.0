@@ -433,7 +433,6 @@ h1 {
 
 .footer {
   padding: 10px 15px;
-  height: 20px;
   display: flex;
   align-items: center;
 }
