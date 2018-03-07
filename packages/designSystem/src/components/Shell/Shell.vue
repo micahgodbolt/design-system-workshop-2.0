@@ -3,7 +3,7 @@
 </template>
 
 <style lang="scss">
-@import "./utilities";
+@import "../../utilities/utilities";
 
 * {
   box-sizing: border-box;

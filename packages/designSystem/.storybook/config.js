@@ -18,7 +18,7 @@ if (
 import { configure, addDecorator } from "@storybook/vue";
 import Vue from "vue";
 
-import Shell from "../src/components/Shell.vue";
+import Shell from "../src/components/Shell/Shell.vue";
 
 addDecorator(story => {
   const Story = story();
