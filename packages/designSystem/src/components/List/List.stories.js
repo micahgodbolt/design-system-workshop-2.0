@@ -11,12 +11,12 @@ import {
   date
 } from '@storybook/addon-knobs'
 
-import my<%= name %> from './<%= name %>.vue'
+import myList from './List.vue'
 
-storiesOf('<%= name %>', module)
+storiesOf('List', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
-    components: { my<%= name %> },
-    template: `<my<%= name %>> </my<%= name %>>`,
+    components: { myList },
+    template: `<myList :data="[1,2,3,4]"> <template slot="item" slot-scope="props"> {{props.item}} </template> </myList>`,
   }))
   ;

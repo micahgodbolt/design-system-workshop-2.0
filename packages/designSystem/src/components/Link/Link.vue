@@ -1,11 +1,10 @@
 <template>
-  <div> <%= name %> </div>
+  <a :href="href"> <slot/> </a>
 </template>
 
 <script>
 export default {
-  components:{},
-  props: []
+  props: ["href"]
 };
 </script>
 
