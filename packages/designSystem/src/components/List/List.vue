@@ -1,6 +1,7 @@
 <template>
   <ul class="List">
     <li
+      class="item"
       v-for="item in data"
       :key="item.id"
     >
@@ -23,5 +24,9 @@ export default {
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+
+.item:not(:last-child) {
+  margin-bottom: get-space(-1);
 }
 </style>

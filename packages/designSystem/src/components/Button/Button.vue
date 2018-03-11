@@ -17,9 +17,17 @@ export default {
 @import "../../utilities/utilities";
 
 .Button {
-  background: $neutral;
-  color: $bg;
+  background: get-color(primary);
+  color: get-color(invertedText);
   border: none;
+  font-size: get-type(1);
+  padding: get-space(-1);
+  &:hover {
+    background: get-color(primary, -10);
+  }
+  &:active {
+    background: get-color(secondary);
+  }
 }
 
 </style>

@@ -7,7 +7,7 @@
       @blur="$emit(`doneEdit`, todo)"
       @enter="$emit(`doneEdit`, todo)"
     />
-    <myButton variant="destroy" @click="$emit(`removeTodo`, todo)">×</myButton>
+    <myButton class="delete" @click="$emit(`removeTodo`, todo)">×</myButton>
   </div>
 </template>
 
@@ -23,4 +23,16 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../utilities/utilities";
+.TodoItem {
+  $root: &;
+  display: flex;
+  .delete {
+    display: none;
+  }
+  &:hover {
+    .delete {
+      display: block;
+    }
+  }
+}
 </style>

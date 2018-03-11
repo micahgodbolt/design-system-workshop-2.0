@@ -19,4 +19,23 @@ export default {
 <style lang="scss" scoped>
 @import "../../utilities/utilities";
 
+@include variant(edit) {
+  border: 1px solid transparent;
+  font-size: get-type(1);
+  padding: get-space(0);
+  width: 100%;
+  &:hover, &:focus {
+    border-color: get-color(secondary);
+    color: get-color(secondary, 10);
+  }
+}
+
+@include variant(new) {
+  font-size: get-type(2);
+  padding: get-space(1);
+  width: 100%;
+  border: none;
+  color: get-color(primary);
+}
+
 </style>

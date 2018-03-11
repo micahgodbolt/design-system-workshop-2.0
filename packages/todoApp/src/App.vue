@@ -23,7 +23,9 @@
           </template>
         </myList>
       </main>
-    <myFooter />
+    <footer>
+      <myFooter />
+    </footer>      
   </myShell>
 </template>
 
@@ -108,7 +110,8 @@ var todoStorage = {
 
 </script>
 
-<style>
+<style lang="scss">
+@import "~@micahgodbolt/demo-design-system/src/utilities/utilities";
 * {
   box-sizing: border-box;
 }
@@ -130,20 +133,15 @@ body {
   font-weight: 300;
 }
 
-.todoapp {
-  background: white;
-  margin: 70px 0 40px 0;
-  position: relative;
+header {
+  margin-bottom: get-space(3);
 }
 
-.header {
-  display: flex;
-  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+main {
+  margin-bottom: get-space(3);
+  
 }
 
-.main {
-  position: relative;
-  z-index: 2;
-  border-top: 1px solid #e6e6e6;
+footer {
 }
 </style>

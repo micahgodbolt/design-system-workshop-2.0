@@ -1,11 +1,11 @@
 <template>
-  <footer>
+  <div class="Footer">
     <p>Frontend Masters</p>
     <p>Design System Workshop</p>
     <p>With Micah Godbolt</p>
     <p><myLink href="https://twitter.com/micahgodbolt"> @micahgodbolt </myLink></p>
     <p><myLink href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </myLink></p>
-  </footer>
+  </div>
 </template>
 
 <script>
@@ -18,4 +18,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../utilities/utilities";
+
+.Footer {
+  text-align: center;
+  p {
+    margin: 0 0 get-space(-2);
+  }
+}
 </style>

@@ -1,10 +1,35 @@
+@import "colors";
+@import "type";
+
+
 /// lighter() - Unified color lightening
 /// @param {color} $color - color to lighten
 /// @param {number} $steps - number of steps to lighten the color
 /// @example scss - lighter()
 ///   lighter(#333, 2)
 ///   // #666666
-@function lighter($color, $steps) {
-  $amount: $steps * 10;
-  @return lighten($color, $amount);
+@function get-color($name, $lighten: 0, $invert: false) {
+  $color: map-get($color-pallete, $name);
+  @if $invert {
+    $color: invert($color)
+  }
+  @if $lighten > 0 {
+    $color: lighten($color, $lighten)
+  }
+  @else if $lighten < 0 {
+    $color: darken($color, -($lighten))
+  };
+
+  @return $color;
+}
+
+
+
+@function get-type($level) {
+  @return map-get($type-scale, $level);
+}
+
+
+@function get-space($level) {
+  @return map-get($type-scale, $level);
 }
