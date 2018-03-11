@@ -25,7 +25,7 @@ addDecorator(story => {
   return {
     components: { Story, Shell },
     template:
-      '<Shell style="padding: 30px; background: white" > <Story/> </Shell>'
+      '<Shell style="padding: 30px;" > <Story/> </Shell>'
   };
 });
 

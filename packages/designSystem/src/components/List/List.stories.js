@@ -17,6 +17,6 @@ storiesOf('List', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
     components: { myList },
-    template: `<myList :data="[1,2,3,4]"> <template slot="item" slot-scope="props"> {{props.item}} </template> </myList>`,
+    template: `<my-list :data="[1,2,3,4]"> <template slot="item" slot-scope="props"> {{props.item}} </template> </my-list>`,
   }))
   ;

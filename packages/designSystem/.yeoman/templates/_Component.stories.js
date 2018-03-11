@@ -17,6 +17,6 @@ storiesOf('<%= name %>', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
     components: { my<%= name %> },
-    template: `<my<%= name %>> </my<%= name %>>`,
+    template: `<my-<%= name.toLowerCase() %>> </my-<%= name.toLowerCase() %>>`,
   }))
   ;

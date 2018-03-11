@@ -1,8 +1,8 @@
 <template>
-  <myShell id="app">
-      <myTitle>Todo App </myTitle>
+  <my-shell id="app">
+      <my-title>Todo App </my-title>
       <header>
-        <myTextfield
+        <my-textfield
           variant="new"
           placeholder="What needs to be done?"
           :value="newTodo"
@@ -12,39 +12,37 @@
       </header>
 
       <main  v-show="todos.length" v-cloak>
-        <myList :data="todos"
-        >
+        <my-list :data="todos">
           <template slot="item" slot-scope='{item}'>
-            <myTodoItem
+            <my-todoItem
               :todo="item"
               @removeTodo="removeTodo"
               @doneEdit="doneEdit"
             />
           </template>
-        </myList>
+        </my-list>
       </main>
     <footer>
-      <myFooter />
+      <my-footer/>
     </footer>      
-  </myShell>
+  </my-shell>
 </template>
 
 <script>
 
-import myButton from '@micahgodbolt/demo-design-system/src/components/Button/Button'
-import myTextfield from '@micahgodbolt/demo-design-system/src/components/Textfield/Textfield'
-import myFooter from '@micahgodbolt/demo-design-system/src/components/Footer/Footer'
-const myTodoItem = () => import('@micahgodbolt/demo-design-system/src/components/TodoItem/TodoItem')
-import myTitle from '@micahgodbolt/demo-design-system/src/components/Title/Title'
-import myList from '@micahgodbolt/demo-design-system/src/components/List/List'
-//import './App.css'
+import myButton from '@micahgodbolt/demo-design-system/src/components/Button/Button';
+import myTextfield from '@micahgodbolt/demo-design-system/src/components/Textfield/Textfield';
+import myFooter from '@micahgodbolt/demo-design-system/src/components/Footer/Footer';
+const myTodoItem = () => import('@micahgodbolt/demo-design-system/src/components/TodoItem/TodoItem');
+import myTitle from '@micahgodbolt/demo-design-system/src/components/Title/Title';
+import myList from '@micahgodbolt/demo-design-system/src/components/List/List';
 import myShell from '@micahgodbolt/demo-design-system/src/components/Shell/Shell.vue';
 
 export default {
   name: "app",
   components: {
     myButton,
-    myTextfield,
+    myTextfield,    
     myFooter,
     myTitle,
     myList,
@@ -112,9 +110,6 @@ var todoStorage = {
 
 <style lang="scss">
 @import "~@micahgodbolt/demo-design-system/src/utilities/utilities";
-* {
-  box-sizing: border-box;
-}
 
 html,
 body {
@@ -123,14 +118,10 @@ body {
 }
 
 body {
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.4;
   background: #f5f5f5;
-  color: #4d4d4d;
   min-width: 230px;
   max-width: 550px;
   margin: 0 auto;
-  font-weight: 300;
 }
 
 header {
@@ -139,9 +130,5 @@ header {
 
 main {
   margin-bottom: get-space(3);
-  
-}
-
-footer {
 }
 </style>

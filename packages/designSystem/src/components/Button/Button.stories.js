@@ -17,7 +17,7 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
     components: { myButton },
-    template: `<myButton @click="click"> ${text('Text', "Button")} </myButton>`,
+    template: `<my-button @click="click"> ${text('Text', "Button")} </my-button>`,
     methods: { click: action('clicked') }
   }))
   ;

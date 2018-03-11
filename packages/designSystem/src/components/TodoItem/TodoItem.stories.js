@@ -18,7 +18,7 @@ storiesOf('TodoItem', module)
   .add('Default', () => ({
     components: { myTodoItem },
     template: `
-      <myTodoItem 
+      <my-todoItem 
         :todo="{id:0, title:'abc'}"
         @doneEdit="doneEdit"
         @removeTodo="removeTodo"
