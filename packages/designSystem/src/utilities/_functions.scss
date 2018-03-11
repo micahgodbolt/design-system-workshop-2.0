@@ -1,35 +1,15 @@
-@import "colors";
-@import "type";
+@function pow($number, $exponent) {
+  $value: 1;
 
-
-/// lighter() - Unified color lightening
-/// @param {color} $color - color to lighten
-/// @param {number} $steps - number of steps to lighten the color
-/// @example scss - lighter()
-///   lighter(#333, 2)
-///   // #666666
-@function get-color($name, $lighten: 0, $invert: false) {
-  $color: map-get($color-pallete, $name);
-  @if $invert {
-    $color: invert($color)
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
   }
-  @if $lighten > 0 {
-    $color: lighten($color, $lighten)
-  }
-  @else if $lighten < 0 {
-    $color: darken($color, -($lighten))
-  };
 
-  @return $color;
-}
-
-
-
-@function get-type($level) {
-  @return map-get($type-scale, $level);
-}
-
-
-@function get-space($level) {
-  @return map-get($type-scale, $level);
+  @return $value;
 }
