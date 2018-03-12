@@ -1,5 +1,5 @@
 {
-  "name": "@micahgodbolt/todo-app",
+  "name": "todo-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-alpha.13",
     "@vue/cli-service": "^3.0.0-alpha.13",
     "vue-template-compiler": "^2.5.13",
-    "@micahgodbolt/demo-design-system": "^1.0.0",
+    "design-system": "^1.0.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
   },

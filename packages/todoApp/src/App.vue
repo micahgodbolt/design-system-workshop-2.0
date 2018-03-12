@@ -30,13 +30,13 @@
 
 <script>
 
-import myButton from '@micahgodbolt/demo-design-system/src/components/Button/Button';
-import myTextfield from '@micahgodbolt/demo-design-system/src/components/Textfield/Textfield';
-import myFooter from '@micahgodbolt/demo-design-system/src/components/Footer/Footer';
-const myTodoItem = () => import('@micahgodbolt/demo-design-system/src/components/TodoItem/TodoItem');
-import myTitle from '@micahgodbolt/demo-design-system/src/components/Title/Title';
-import myList from '@micahgodbolt/demo-design-system/src/components/List/List';
-import myShell from '@micahgodbolt/demo-design-system/src/components/Shell/Shell.vue';
+import myButton from 'design-system/src/components/Button/Button';
+import myTextfield from 'design-system/src/components/Textfield/Textfield';
+import myFooter from 'design-system/src/components/Footer/Footer';
+const myTodoItem = () => import('design-system/src/components/TodoItem/TodoItem');
+import myTitle from 'design-system/src/components/Title/Title';
+import myList from 'design-system/src/components/List/List';
+import myShell from 'design-system/src/components/Shell/Shell.vue';
 
 export default {
   name: "app",
@@ -109,7 +109,7 @@ var todoStorage = {
 </script>
 
 <style lang="scss">
-@import "~@micahgodbolt/demo-design-system/src/utilities/utilities";
+@import "~design-system/src/utilities/utilities";
 
 html,
 body {
@@ -125,7 +125,7 @@ body {
 }
 
 header {
-  margin-bottom: get-space(3);
+  margin-bottom: get-space(2);
 }
 
 main {

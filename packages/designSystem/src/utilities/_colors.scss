@@ -1,3 +1,4 @@
+///
 $color-pallete: (
     background: #ffffff,
     text: #333,
@@ -6,7 +7,7 @@ $color-pallete: (
     secondary: #e66225,
 );
 
-
+///
 @function get-color($name, $lighten: 0, $invert: false) {
     $color: map-get($color-pallete, $name);
     @if $invert {

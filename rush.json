@@ -5,11 +5,11 @@
 
   "projects": [
     {
-      "packageName": "@micahgodbolt/todo-app",
+      "packageName": "todo-app",
       "projectFolder": "packages/todoApp"
     },
     {
-      "packageName": "@micahgodbolt/demo-design-system",
+      "packageName": "design-system",
       "projectFolder": "packages/designSystem",
       "shouldPublish": true
     }

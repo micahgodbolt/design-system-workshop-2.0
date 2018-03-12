@@ -1,5 +1,5 @@
 {
-  "name": "@micahgodbolt/demo-design-system",
+  "name": "design-system",
   "version": "1.0.0",
   "description": "A collection of Vue components",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "build-storybook": "build-storybook",
     "screener": "screener-storybook --conf screener.config.js --debug",
     "scaffold": "yo .yeoman/",
+    "sassdoc": "sassdoc ./src --theme herman",
     "build": ""
   },
   "author": "",
@@ -31,7 +32,9 @@
     "screener-runner": "^0.8.1",
     "yeoman-generator": "^2.0.2",
     "yo": "^2.0.1",
-    "yosay": "^2.0.1"
+    "yosay": "^2.0.1",
+    "sassdoc":"^2.5.0",
+    "sassdoc-theme-herman":"^2.0.0"
   },
   "dependencies": {}
 }
