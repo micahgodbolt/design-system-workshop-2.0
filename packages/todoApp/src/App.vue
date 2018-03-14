@@ -9,7 +9,11 @@
         <!-- Todo List -->
       </main>
     <footer>
-      Footer Details
+      <p>Frontend Masters</p>
+      <p>Design System Workshop</p>
+      <p>With Micah Godbolt</p>
+      <p><my-link href="https://twitter.com/micahgodbolt"> @micahgodbolt </my-link></p>
+      <p><my-link href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </my-link></p>
     </footer>      
   </my-shell>
 </template>
@@ -17,11 +21,13 @@
 <script>
 
 import myShell from 'design-system/src/components/Shell/Shell.vue';
+import myLink from 'design-system/src/components/Link/Link.vue';
 
 export default {
   name: "app",
   components: {
-    myShell
+    myShell,
+    myLink
   },
   data: function() {
     return {
