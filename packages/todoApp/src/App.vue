@@ -12,7 +12,15 @@
       </header>
 
       <main  v-show="todos.length" v-cloak>
-        <!-- Todo List -->
+         <my-list :data="todos">
+          <template slot="item" slot-scope='{item}'>
+            <my-todoItem
+              :todo="item"
+              @removeTodo="removeTodo"
+              @doneEdit="doneEdit"
+            />
+          </template>
+        </my-list>
       </main>
     <footer>
       <my-footer />
@@ -27,6 +35,8 @@ import myLink from 'design-system/src/components/Link/Link.vue';
 import myTitle from 'design-system/src/components/Title/Title.vue';
 import myTextfield from 'design-system/src/components/Textfield/Textfield.vue';
 import myFooter from 'design-system/src/components/Footer/Footer.vue';
+import myList from 'design-system/src/components/List/List.vue';
+import myTodoItem from 'design-system/src/components/TodoItem/TodoItem.vue';
 
 export default {
   name: "app",
@@ -35,7 +45,9 @@ export default {
     myLink,
     myTitle,
     myTextfield,
-    myFooter
+    myFooter,
+    myList,
+    myTodoItem
   },
   data: function() {
     return {
