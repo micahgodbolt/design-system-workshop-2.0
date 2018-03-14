@@ -15,11 +15,7 @@
         <!-- Todo List -->
       </main>
     <footer>
-      <p>Frontend Masters</p>
-      <p>Design System Workshop</p>
-      <p>With Micah Godbolt</p>
-      <p><my-link href="https://twitter.com/micahgodbolt"> @micahgodbolt </my-link></p>
-      <p><my-link href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </my-link></p>
+      <my-footer />
     </footer>      
   </my-shell>
 </template>
@@ -30,6 +26,7 @@ import myShell from 'design-system/src/components/Shell/Shell.vue';
 import myLink from 'design-system/src/components/Link/Link.vue';
 import myTitle from 'design-system/src/components/Title/Title.vue';
 import myTextfield from 'design-system/src/components/Textfield/Textfield.vue';
+import myFooter from 'design-system/src/components/Footer/Footer.vue';
 
 export default {
   name: "app",
@@ -37,7 +34,8 @@ export default {
     myShell,
     myLink,
     myTitle,
-    myTextfield
+    myTextfield,
+    myFooter
   },
   data: function() {
     return {
