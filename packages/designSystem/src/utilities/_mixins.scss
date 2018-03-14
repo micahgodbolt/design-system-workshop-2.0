@@ -1,3 +1,4 @@
+///
 @mixin variant($type) {
   [data-variant="#{$type}"] {
     @content;

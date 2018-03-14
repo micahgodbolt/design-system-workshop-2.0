@@ -10,6 +10,7 @@
     "storybook": "cd packages/designSystem && npm run storybook",
     "storybook:build": "cd packages/designSystem && npm run build-storybook",
     "screener": "cd packages/designSystem && npm run screener",
+    "sassdoc": "cd packages/designSystem && npm run sassdoc",
     "scaffold": "cd packages/designSystem && npm run scaffold"
   },
   "author": "",

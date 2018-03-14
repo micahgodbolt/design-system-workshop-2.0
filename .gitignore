@@ -5,6 +5,7 @@ node_modules
 /common/temp/** 
 
 dist
+sassdoc
 storybook-static
 package-lock.json
 *build.log
