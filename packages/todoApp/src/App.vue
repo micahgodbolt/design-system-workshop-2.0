@@ -1,6 +1,6 @@
 <template>
   <my-shell id="app">
-      <h1>Todo App </h1>
+      <my-title>Todo App </my-title>
       <header>
         <input />
       </header>
@@ -22,12 +22,14 @@
 
 import myShell from 'design-system/src/components/Shell/Shell.vue';
 import myLink from 'design-system/src/components/Link/Link.vue';
+import myTitle from 'design-system/src/components/Title/Title.vue';
 
 export default {
   name: "app",
   components: {
     myShell,
-    myLink
+    myLink,
+    myTitle
   },
   data: function() {
     return {
