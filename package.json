@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "node node_modules/@microsoft/rush/bin/rush install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd packages/todoApp && npm run serve",
+    "app": "cd packages/todoApp && npm run serve",
+    "start": "concurrently \"npm run app\" \"npm run storybook\"",
     "storybook": "cd packages/designSystem && npm run storybook",
     "storybook:build": "cd packages/designSystem && npm run build-storybook",
     "screener": "cd packages/designSystem && npm run screener",
@@ -16,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@microsoft/rush": "^4.2.5"
+    "@microsoft/rush": "^4.2.5",
+    "concurrently": "^3.5.1"
   }
 }

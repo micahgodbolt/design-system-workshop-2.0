@@ -1,53 +1,27 @@
 <template>
   <my-shell id="app">
-      <my-title>Todo App </my-title>
+      <h1>Todo App </h1>
       <header>
-        <my-textfield
-          variant="new"
-          placeholder="What needs to be done?"
-          :value="newTodo"
-          @input="(value) => { newTodo = value }"
-          @enter="addTodo"
-        />
+        <input />
       </header>
 
       <main  v-show="todos.length" v-cloak>
-        <my-list :data="todos">
-          <template slot="item" slot-scope='{item}'>
-            <my-todoItem
-              :todo="item"
-              @removeTodo="removeTodo"
-              @doneEdit="doneEdit"
-            />
-          </template>
-        </my-list>
+        <!-- Todo List -->
       </main>
     <footer>
-      <my-footer/>
+      Footer Details
     </footer>      
   </my-shell>
 </template>
 
 <script>
 
-import myButton from 'design-system/src/components/Button/Button';
-import myTextfield from 'design-system/src/components/Textfield/Textfield';
-import myFooter from 'design-system/src/components/Footer/Footer';
-const myTodoItem = () => import('design-system/src/components/TodoItem/TodoItem');
-import myTitle from 'design-system/src/components/Title/Title';
-import myList from 'design-system/src/components/List/List';
 import myShell from 'design-system/src/components/Shell/Shell.vue';
 
 export default {
   name: "app",
   components: {
-    myButton,
-    myTextfield,    
-    myFooter,
-    myTitle,
-    myList,
-    myShell,
-    myTodoItem
+    myShell
   },
   data: function() {
     return {
