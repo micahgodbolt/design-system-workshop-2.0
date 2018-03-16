@@ -20,12 +20,6 @@ storiesOf('TodoItem', module)
     template: `
       <my-todoItem 
         :todo="{id:0, title:'abc'}"
-        @doneEdit="doneEdit"
-        @removeTodo="removeTodo"
-      />`,
-    methods: { 
-      doneEdit: action('doneEdit'),
-      removeTodo: action('removeTodo')
-    }
+      />`
   }))
   ;
