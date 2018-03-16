@@ -12,15 +12,7 @@
       </header>
 
       <main  v-show="todos.length" v-cloak>
-         <my-list :data="todos">
-          <template slot="item" slot-scope='{item}'>
-            <my-todoItem
-              :todo="item"
-              @removeTodo="removeTodo"
-              @doneEdit="doneEdit"
-            />
-          </template>
-        </my-list>
+         <!-- Todo List -->
       </main>
     <footer>
       <my-footer />
