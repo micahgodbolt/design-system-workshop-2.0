@@ -34,7 +34,7 @@ storiesOf("Textfield", module)
         @input="input" 
         @enter="enter" 
         @blur="blur" 
-        placeholder="Put text in here" 
+        placeholder="${text('placeholder', 'Put text in here')}" 
         variant="new"
       />`,
     methods: {
@@ -50,7 +50,7 @@ storiesOf("Textfield", module)
         @input="input" 
         @enter="enter" 
         @blur="blur" 
-        placeholder="Put text in here" 
+        placeholder="${text('placeholder', 'Put text in here')}" 
         variant="edit"
       />`,
     methods: {
