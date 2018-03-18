@@ -24,7 +24,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../utilities/utilities";
 .TodoItem {
-  $root: &;
   display: flex;
   .delete {
     display: none;

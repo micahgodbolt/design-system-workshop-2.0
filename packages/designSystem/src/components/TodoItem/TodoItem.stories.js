@@ -1,5 +1,5 @@
-import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
+import { storiesOf } from "@storybook/vue";
+import { action } from "@storybook/addon-actions";
 import {
   withKnobs,
   text,
@@ -9,17 +9,22 @@ import {
   select,
   color,
   date
-} from '@storybook/addon-knobs'
+} from "@storybook/addon-knobs";
 
-import myTodoItem from './TodoItem.vue'
+import myTodoItem from "./TodoItem.vue";
 
-storiesOf('TodoItem', module)
+storiesOf("TodoItem", module)
   .addDecorator(withKnobs)
-  .add('Default', () => ({
+  .add("Default", () => ({
     components: { myTodoItem },
     template: `
       <my-todoItem 
         :todo="{id:0, title:'abc'}"
-      />`
-  }))
-  ;
+        @doneEdit="doneEdit"
+        @removeTodo="removeTodo"
+      />`,
+    methods: {
+      doneEdit: action("doneEdit"),
+      removeTodo: action("removeTodo")
+    }
+  }));

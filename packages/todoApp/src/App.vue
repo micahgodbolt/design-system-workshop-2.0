@@ -82,6 +82,7 @@ export default {
     },
 
     doneEdit: function (todo) {
+      console.log(todo.title);
       todo.title = todo.title.trim()
       if (!todo.title) {
         this.removeTodo(todo)

@@ -1,5 +1,5 @@
-import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
+import { storiesOf } from "@storybook/vue";
+import { action } from "@storybook/addon-actions";
 import {
   withKnobs,
   text,
@@ -9,14 +9,13 @@ import {
   select,
   color,
   date
-} from '@storybook/addon-knobs'
+} from "@storybook/addon-knobs";
 
-import myList from './List.vue'
+import myList from "./List.vue";
 
-storiesOf('List', module)
+storiesOf("List", module)
   .addDecorator(withKnobs)
-  .add('Default', () => ({
+  .add("Default", () => ({
     components: { myList },
-    template: `<my-list :data="[1,2,3,4]"> <template slot="item" slot-scope="props"> {{props.item}} </template> </my-list>`,
-  }))
-  ;
+    template: `<my-list :data="[1,2,3,4]"> <template slot="item" slot-scope="props"> {{props.item}} </template> </my-list>`
+  }));

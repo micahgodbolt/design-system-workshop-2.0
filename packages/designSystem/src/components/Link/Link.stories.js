@@ -1,5 +1,5 @@
-import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
+import { storiesOf } from "@storybook/vue";
+import { action } from "@storybook/addon-actions";
 import {
   withKnobs,
   text,
@@ -9,14 +9,13 @@ import {
   select,
   color,
   date
-} from '@storybook/addon-knobs'
+} from "@storybook/addon-knobs";
 
-import myLink from './Link.vue'
+import myLink from "./Link.vue";
 
-storiesOf('Link', module)
+storiesOf("Link", module)
   .addDecorator(withKnobs)
-  .add('Default', () => ({
+  .add("Default", () => ({
     components: { myLink },
-    template: `<my-link href="#">Click Me</my-link>`,
-  }))
-  ;
+    template: `<my-link href="#">Click Me</my-link>`
+  }));

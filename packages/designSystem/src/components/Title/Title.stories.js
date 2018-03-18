@@ -1,5 +1,5 @@
-import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
+import { storiesOf } from "@storybook/vue";
+import { action } from "@storybook/addon-actions";
 import {
   withKnobs,
   text,
@@ -9,14 +9,13 @@ import {
   select,
   color,
   date
-} from '@storybook/addon-knobs'
+} from "@storybook/addon-knobs";
 
-import myTitle from './Title.vue'
+import myTitle from "./Title.vue";
 
-storiesOf('Title', module)
+storiesOf("Title", module)
   .addDecorator(withKnobs)
-  .add('Default', () => ({
+  .add("Default", () => ({
     components: { myTitle },
-    template: `<my-title>My Todo List</my-title>`,
-  }))
-  ;
+    template: `<my-title>My Todo List</my-title>`
+  }));
