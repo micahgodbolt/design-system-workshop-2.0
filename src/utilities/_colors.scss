@@ -7,13 +7,7 @@ $color-pallete: (
     secondary: #e66225,
 );
 
-/// get-color() - Get color for pallete
-/// @param {color} $color - Color to get from pallete
-/// @param {number} $lighten [0] - Amount to lighten color. Negative number will darken 
-/// @param {boolean} $invert [false] - Whether or not the color is to be inverted before lightened
-/// @example scss - get-color Function
-///   get-color(primary, 10, true)
-///   // #69dce0
+///
 @function get-color($name, $lighten: 0, $invert: false) {
     $color: map-get($color-pallete, $name);
     @if $invert {
@@ -27,4 +21,4 @@ $color-pallete: (
     };
   
     @return $color;
-}
+  }

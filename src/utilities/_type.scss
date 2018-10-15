@@ -7,32 +7,12 @@ $default-spacing: 1rem;
 $default-scale: 1.33;
 
   
-/// get-type() - Get type size for type ramp
-/// @param {number} $level - Number of steps up or down the type ramp
-/// @example scss - Get Default Text
-///   get-type(0)
-///   // 1rem
-/// @example scss - Get Header Text
-///   get-type(4)
-///   // 3.13rem
-/// @example scss - Get Small Text
-///   get-type(-1)
-///   // .75rem
+///
 @function get-type($level) {
   @return $default-type * pow($default-scale, $level);
 }
 
-/// get-space() - Get spacing size for spaceing ramp
-/// @param {number} $level - Number of steps up or down the spacing ramp
-/// @example scss - Get Default Space
-///   get-space(0)
-///   // 1rem
-/// @example scss - Up two levels
-///   get-space(2)
-///   // 1.7689rem
-/// @example scss - Down two levels
-///   get-space(-2)
-///   // .5653rem
+///
 @function get-space($level) {
   @return $default-spacing * pow($default-scale, $level);
 }

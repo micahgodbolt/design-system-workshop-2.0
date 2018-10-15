@@ -1,12 +1,4 @@
-/// get-space() - Get spacing size for spaceing ramp
-/// @param {number} $number - The base
-/// @param {number} $exponent - The exponent used to raise the base
-/// @example scss Positive Power
-///   pow(2, 2)
-///   // 4
-/// @example scss Negative Power
-///   pow(2, -2)
-///   // .25
+///
 @function pow($number, $exponent) {
   $value: 1;
 

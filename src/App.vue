@@ -1,29 +1,15 @@
 <template>
   <Shell id="app">
-      <Title>Todo App </Title>
+      <h1>Todo App </h1>
       <header>
-        <Textfield
-          variant="new"
-          placeholder="What needs to be done?"
-          :value="newTodo"
-          @input="(value) => { newTodo = value }"
-          @enter="addTodo"
-        />
+        <input />
       </header>
 
       <main  v-show="todos.length" v-cloak>
-         <List :data="todos">
-          <template slot="item" slot-scope='{item}'>
-            <TodoItem
-              :todo="item"
-              @removeTodo="removeTodo"
-              @doneEdit="doneEdit"
-            />
-          </template>
-        </List>
+        <!-- Todo List -->
       </main>
     <footer>
-      <Footer />
+      Footer Details
     </footer>      
   </Shell>
 </template>
@@ -31,24 +17,17 @@
 <script>
 
 import Shell from './components/Shell/Shell.vue';
-import Link from './components/Link/Link.vue';
-import Title from './components/Title/Title.vue';
-import Textfield from './components/Textfield/Textfield.vue';
-import Footer from './components/Footer/Footer.vue';
-import List from './components/List/List.vue';
-import TodoItem from './components/TodoItem/TodoItem.vue';
 
 export default {
   name: "app",
   components: {
-    Shell,
-    Link,
-    Title,
-    Textfield,
-    Footer,
-    List,
-    TodoItem
+    Shell
   },
+
+
+  ///////////////////////////////////////////////////// 
+  //             Application Specific                //
+  /////////////////////////////////////////////////////
   data: function() {
     return {
       todos: todoStorage.fetch(),
@@ -109,7 +88,7 @@ var todoStorage = {
 </script>
 
 <style lang="scss">
-@import "utilities/utilities";
+@import "./src/utilities/utilities";
 
 html,
 body {
