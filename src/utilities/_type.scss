@@ -1,0 +1,18 @@
+@import "functions";
+///
+$default-type: 1rem;
+///
+$default-spacing: 1rem;
+///
+$default-scale: 1.33;
+
+  
+///
+@function get-type($level) {
+  @return $default-type * pow($default-scale, $level);
+}
+
+///
+@function get-space($level) {
+  @return $default-spacing * pow($default-scale, $level);
+}

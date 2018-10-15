@@ -1,28 +1,134 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <my-shell id="app">
+      <my-title>Todo App </my-title>
+      <header>
+        <my-textfield
+          variant="new"
+          placeholder="What needs to be done?"
+          :value="newTodo"
+          @input="(value) => { newTodo = value }"
+          @enter="addTodo"
+        />
+      </header>
+
+      <main  v-show="todos.length" v-cloak>
+         <my-list :data="todos">
+          <template slot="item" slot-scope='{item}'>
+            <my-todoItem
+              :todo="item"
+              @removeTodo="removeTodo"
+              @doneEdit="doneEdit"
+            />
+          </template>
+        </my-list>
+      </main>
+    <footer>
+      <my-footer />
+    </footer>      
+  </my-shell>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import myShell from './components/Shell/Shell.vue';
+import myLink from './components/Link/Link.vue';
+import myTitle from './components/Title/Title.vue';
+import myTextfield from './components/Textfield/Textfield.vue';
+import myFooter from './components/Footer/Footer.vue';
+import myList from './components/List/List.vue';
+import myTodoItem from './components/TodoItem/TodoItem.vue';
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    myShell,
+    myLink,
+    myTitle,
+    myTextfield,
+    myFooter,
+    myList,
+    myTodoItem
+  },
+  data: function() {
+    return {
+      todos: todoStorage.fetch(),
+      newTodo: "",
+    };
+  },
+  watch: {
+    todos: {
+      handler: function(todos) {
+        todoStorage.save(todos);
+      },
+      deep: true
+    }
+  },
+
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo && this.newTodo.trim();
+      if (!value) {
+        return;
+      }
+      this.todos.push({
+        id: todoStorage.uid++,
+        title: value
+      });
+      this.newTodo = "";
+    },
+
+    removeTodo: function(todo) {
+      this.todos.splice(this.todos.indexOf(todo), 1);
+    },
+
+    doneEdit: function (todo) {
+      todo.title = todo.title.trim()
+      if (!todo.title) {
+        this.removeTodo(todo)
+      }
+    },
+  },
+};
+
+// localStorage persistence
+var STORAGE_KEY = "todos-vuejs-2.0";
+var todoStorage = {
+  fetch: function() {
+    var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    todos.forEach(function(todo, index) {
+      todo.id = index;
+    });
+    todoStorage.uid = todos.length;
+    return todos;
+  },
+  save: function(todos) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
   }
-}
+};
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "utilities/utilities";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: get-space(2);
+}
+
+main {
+  margin-bottom: get-space(3);
 }
 </style>

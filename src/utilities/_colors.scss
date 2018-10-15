@@ -1,0 +1,24 @@
+///
+$color-pallete: (
+    background: #ffffff,
+    text: #333,
+    invertedText: #ffffff,
+    primary: #c02d28,
+    secondary: #e66225,
+);
+
+///
+@function get-color($name, $lighten: 0, $invert: false) {
+    $color: map-get($color-pallete, $name);
+    @if $invert {
+      $color: invert($color)
+    }
+    @if $lighten > 0 {
+      $color: lighten($color, $lighten)
+    }
+    @else if $lighten < 0 {
+      $color: darken($color, -($lighten))
+    };
+  
+    @return $color;
+  }

@@ -1,19 +1,37 @@
 {
-  "name": "design-system-workshop",
+  "name": "design-system",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "sassdoc": "sassdoc ./src",
+    "scaffold": "yo .yeoman/",
+    "screener": "screener-storybook --conf screener.config.js --debug"
   },
   "dependencies": {
+    "sassdoc": "^2.5.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "babel-preset-vue": "^2.0.2",
+    "@babel/core": "^7.1.0",
+    "@storybook/addon-actions": "4.0.0-alpha.24",
+    "@storybook/addon-knobs": "^4.0.0-alpha.24",
+    "@storybook/addon-links": "4.0.0-alpha.24",
+    "@storybook/addons": "4.0.0-alpha.24",
+    "@storybook/vue": "^4.0.0-alpha.24",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "moment": "^2.22.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "yeoman-generator": "^2.0.2",
+    "yo": "^2.0.1",
+    "yosay": "^2.0.1",
+    "screener-storybook": "^0.15.3",
+    "screener-runner": "^0.10.18"
   }
 }
