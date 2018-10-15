@@ -12,7 +12,7 @@ import {
   date
 } from "@storybook/addon-knobs";
 
-import myTextfield from "./Textfield.vue";
+import Textfield from "./Textfield.vue";
 
 storiesOf("Textfield", module)
   .addDecorator(withKnobs)
@@ -28,9 +28,9 @@ storiesOf("Textfield", module)
     return story;
   })
   .add("New", () => ({
-    components: { myTextfield },
+    components: { Textfield },
     template: `
-      <my-textfield 
+      <Textfield 
         @input="input" 
         @enter="enter" 
         @blur="blur" 
@@ -44,9 +44,9 @@ storiesOf("Textfield", module)
     }
   }))
   .add("Edit", () => ({
-    components: { myTextfield },
+    components: { Textfield },
     template: `
-      <my-textfield 
+      <Textfield 
         @input="input" 
         @enter="enter" 
         @blur="blur" 

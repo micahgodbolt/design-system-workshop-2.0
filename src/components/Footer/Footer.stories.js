@@ -1,9 +1,9 @@
 import { storiesOf } from "@storybook/vue";
 
-import myFooter from "./Footer.vue";
+import Footer from "./Footer.vue";
 
 storiesOf("Footer", module)
 .add("Default", () => ({
-  components: { myFooter },
-  template: `<my-footer> </my-footer>`
+  components: { Footer },
+  template: `<Footer> </Footer>`
 }));

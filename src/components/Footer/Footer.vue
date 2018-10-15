@@ -2,15 +2,15 @@
   <div class="Footer">
     <p>Design System Workshop</p>
     <p>With Micah Godbolt</p>
-    <p><myLink href="https://twitter.com/micahgodbolt"> @micahgodbolt </myLink></p>
-    <p><myLink href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </myLink></p>
+    <p><Link href="https://twitter.com/micahgodbolt"> @micahgodbolt </Link></p>
+    <p><Link href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </Link></p>
   </div>
 </template>
 
 <script>
-import myLink from "../Link/Link.vue";
+import Link from "../Link/Link.vue";
 export default {
-  components: {myLink},
+  components: {Link},
   props: []
 };
 </script>
