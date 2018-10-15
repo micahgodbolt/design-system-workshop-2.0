@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run serve\" \"npm run storybook\"",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -11,10 +12,11 @@
     "screener": "screener-storybook --conf screener.config.js --debug"
   },
   "dependencies": {
-    "sassdoc": "^2.5.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "concurrently": "^4.0.1",
+    "sassdoc": "^2.5.0",
     "babel-preset-vue": "^2.0.2",
     "@babel/core": "^7.1.0",
     "@storybook/addon-actions": "4.0.0-alpha.24",

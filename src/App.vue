@@ -49,6 +49,10 @@ export default {
     List,
     TodoItem
   },
+
+  ///////////////////////////////////////////////////// 
+  //             Application Specific                //
+  /////////////////////////////////////////////////////
   data: function() {
     return {
       todos: todoStorage.fetch(),
