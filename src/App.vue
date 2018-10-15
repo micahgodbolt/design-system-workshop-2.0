@@ -9,7 +9,10 @@
         <!-- Todo List -->
       </main>
     <footer>
-      Footer Details
+      <p>Design System Workshop</p>
+      <p>With Micah Godbolt</p>
+      <p><Link href="https://twitter.com/micahgodbolt"> @micahgodbolt </Link></p>
+      <p><Link href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </Link></p>
     </footer>      
   </Shell>
 </template>
@@ -17,11 +20,13 @@
 <script>
 
 import Shell from './components/Shell/Shell.vue';
+import Link from './components/Link/Link.vue';
 
 export default {
   name: "app",
   components: {
-    Shell
+    Shell,
+    Link
   },
 
 
