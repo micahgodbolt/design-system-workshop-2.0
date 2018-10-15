@@ -2,7 +2,13 @@
   <Shell id="app">
       <Title>Todo App </Title>
       <header>
-        <input />
+        <Textfield
+          variant="new"
+          placeholder="What needs to be done?"
+          :value="newTodo"
+          @input="(value) => { newTodo = value }"
+          @enter="addTodo"
+        />
       </header>
 
       <main  v-show="todos.length" v-cloak>
@@ -22,13 +28,15 @@
 import Shell from './components/Shell/Shell.vue';
 import Link from './components/Link/Link.vue';
 import Title from './components/Title/Title.vue';
+import Textfield from './components/Textfield/Textfield.vue';
 
 export default {
   name: "app",
   components: {
     Shell,
     Link,
-    Title
+    Title,
+    Textfield
   },
 
 
