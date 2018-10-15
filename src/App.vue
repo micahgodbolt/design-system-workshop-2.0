@@ -15,10 +15,7 @@
         <!-- Todo List -->
       </main>
     <footer>
-      <p>Design System Workshop</p>
-      <p>With Micah Godbolt</p>
-      <p><Link href="https://twitter.com/micahgodbolt"> @micahgodbolt </Link></p>
-      <p><Link href="https://github.com/micahgodbolt/design-system-workshop-2.0"> Github </Link></p>
+      <Footer />
     </footer>      
   </Shell>
 </template>
@@ -29,6 +26,7 @@ import Shell from './components/Shell/Shell.vue';
 import Link from './components/Link/Link.vue';
 import Title from './components/Title/Title.vue';
 import Textfield from './components/Textfield/Textfield.vue';
+import Footer from './components/Footer/Footer.vue';
 
 export default {
   name: "app",
@@ -36,7 +34,8 @@ export default {
     Shell,
     Link,
     Title,
-    Textfield
+    Textfield,
+    Footer
   },
 
 

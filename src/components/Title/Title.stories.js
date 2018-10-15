@@ -17,6 +17,6 @@ storiesOf('Title', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
     components: { Title },
-    template: `<Title>My Todo List</my-title>`,
+    template: `<Title>My Todo List</Title>`,
   }))
   ;
