@@ -11,14 +11,14 @@ import {
   date
 } from "@storybook/addon-knobs";
 
-import myTodoItem from "./TodoItem.vue";
+import TodoItem from "./TodoItem.vue";
 
 storiesOf("TodoItem", module)
   .addDecorator(withKnobs)
   .add("Default", () => ({
-    components: { myTodoItem },
+    components: { TodoItem },
     template: `
-      <my-todoItem 
+      <TodoItem 
         :todo="{id:0, title:'abc'}"
         @doneEdit="doneEdit"
         @removeTodo="removeTodo"

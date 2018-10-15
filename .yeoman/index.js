@@ -16,7 +16,7 @@ module.exports = class extends Generator {
     return this.prompt({
       type: "input",
       name: "name",
-      message: "What will this be called (i.e. 'Button')"
+      message: "What will this be called (i.e. 'MenuItem')"
     }).then(answers => {
       this.answers = answers;
       done();

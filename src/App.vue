@@ -1,8 +1,8 @@
 <template>
-  <my-shell id="app">
-      <my-title>Todo App </my-title>
+  <Shell id="app">
+      <Title>Todo App </Title>
       <header>
-        <my-textfield
+        <Textfield
           variant="new"
           placeholder="What needs to be done?"
           :value="newTodo"
@@ -12,42 +12,42 @@
       </header>
 
       <main  v-show="todos.length" v-cloak>
-         <my-list :data="todos">
+         <List :data="todos">
           <template slot="item" slot-scope='{item}'>
-            <my-todoItem
+            <TodoItem
               :todo="item"
               @removeTodo="removeTodo"
               @doneEdit="doneEdit"
             />
           </template>
-        </my-list>
+        </List>
       </main>
     <footer>
-      <my-footer />
+      <Footer />
     </footer>      
-  </my-shell>
+  </Shell>
 </template>
 
 <script>
 
-import myShell from './components/Shell/Shell.vue';
-import myLink from './components/Link/Link.vue';
-import myTitle from './components/Title/Title.vue';
-import myTextfield from './components/Textfield/Textfield.vue';
-import myFooter from './components/Footer/Footer.vue';
-import myList from './components/List/List.vue';
-import myTodoItem from './components/TodoItem/TodoItem.vue';
+import Shell from './components/Shell/Shell.vue';
+import Link from './components/Link/Link.vue';
+import Title from './components/Title/Title.vue';
+import Textfield from './components/Textfield/Textfield.vue';
+import Footer from './components/Footer/Footer.vue';
+import List from './components/List/List.vue';
+import TodoItem from './components/TodoItem/TodoItem.vue';
 
 export default {
   name: "app",
   components: {
-    myShell,
-    myLink,
-    myTitle,
-    myTextfield,
-    myFooter,
-    myList,
-    myTodoItem
+    Shell,
+    Link,
+    Title,
+    Textfield,
+    Footer,
+    List,
+    TodoItem
   },
   data: function() {
     return {

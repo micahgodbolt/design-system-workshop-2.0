@@ -1,6 +1,6 @@
 <template>
   <div class="TodoItem">
-    <myTextfield
+    <Textfield
       :value="todo.title"
       variant="edit"
       @input="(value) => { todo.title = value }"
@@ -13,10 +13,10 @@
 
 <script>
 import Button from "../Button/Button.vue";
-import myTextfield from "../Textfield/Textfield.vue";
+import Textfield from "../Textfield/Textfield.vue";
 
 export default {
-  components: {Button, myTextfield},
+  components: {Button, Textfield},
   props: ['todo']
 };
 </script>
