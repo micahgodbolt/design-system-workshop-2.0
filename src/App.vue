@@ -28,12 +28,14 @@ import Title from './components/Title/Title.vue';
 import Textfield from './components/Textfield/Textfield.vue';
 import Footer from './components/Footer/Footer.vue';
 import TodoItem from './components/TodoItem/TodoItem.vue';
+import List from './components/List/List.vue';
 
 export default {
   name: "app",
   components: {
     Shell,
     Link,
+    List,
     Title,
     Textfield,
     Footer,
