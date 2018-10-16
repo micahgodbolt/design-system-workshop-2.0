@@ -12,7 +12,15 @@
       </header>
 
       <main  v-show="todos.length" v-cloak>
-        <!-- Todo List -->
+        <List :data="todos">
+          <template slot="item" slot-scope='{item}'>
+            <TodoItem
+              :todo="item"
+              @removeTodo="removeTodo"
+              @doneEdit="doneEdit"
+            />
+          </template>
+        </List>
       </main>
     <footer>
       <Footer />
@@ -28,6 +36,7 @@ import Title from './components/Title/Title.vue';
 import Textfield from './components/Textfield/Textfield.vue';
 import Footer from './components/Footer/Footer.vue';
 import TodoItem from './components/TodoItem/TodoItem.vue';
+import List from './components/List/List.vue';
 
 export default {
   name: "app",
