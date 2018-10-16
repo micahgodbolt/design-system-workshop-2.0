@@ -27,6 +27,7 @@ import Link from './components/Link/Link.vue';
 import Title from './components/Title/Title.vue';
 import Textfield from './components/Textfield/Textfield.vue';
 import Footer from './components/Footer/Footer.vue';
+import TodoItem from './components/TodoItem/TodoItem.vue';
 
 export default {
   name: "app",
@@ -35,7 +36,8 @@ export default {
     Link,
     Title,
     Textfield,
-    Footer
+    Footer,
+    TodoItem
   },
 
 
