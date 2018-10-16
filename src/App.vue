@@ -43,6 +43,7 @@ export default {
   components: {
     Shell,
     Link,
+    List,
     Title,
     Textfield,
     Footer,
